@@ -1,4 +1,4 @@
-import FavButton from "../FavButton";
+import FavButton from "../FavButton/FavButton";
 import Button from "../Button/Button";
 
 const AdvertItem = ({
