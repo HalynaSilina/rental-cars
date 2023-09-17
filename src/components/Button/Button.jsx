@@ -1,5 +1,11 @@
-const Button = ({ type = "button", text }) => {
-  return <button type={type}>{text}</button>;
+import css from "./Button.module.css";
+
+const Button = ({ type = "button", text, onClick }) => {
+  return (
+    <button type={type} onClick={onClick} className={css.button}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

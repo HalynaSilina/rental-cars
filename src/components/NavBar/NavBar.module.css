@@ -1,0 +1,33 @@
+.navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+  padding: 150px 30px;
+  z-index: 1;
+}
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 48px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  font-weight: 600;
+  border-radius: 12px;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(52, 112, 255, 1);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5ms;
+}
+.navButton:hover {
+  background-color: rgba(11, 68, 205, 1);
+}
+.navButton.active {
+  background-color: rgba(11, 68, 205, 1) !important;
+}

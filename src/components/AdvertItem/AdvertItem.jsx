@@ -1,33 +1,42 @@
 import FavButton from "../FavButton/FavButton";
 import Button from "../Button/Button";
+import { getAddress, getAccessories } from "../../utils/getAdditionalInfo";
+import css from "./AdvertItem.module.css";
 
-const AdvertItem = ({
-  img,
-  make,
-  model,
-  type,
-  year,
-  rentalPrice,
-  city,
-  country,
-  rentalCompany,
-  mileage,
-  status = "Premium",
-  accessories,
-}) => {
+const AdvertItem = ({ advert, status = "Premium", onClick }) => {
+  const {
+    img,
+    make,
+    model,
+    address,
+    year,
+    rentalCompany,
+    rentalPrice,
+    type,
+    mileage,
+    accessories,
+  } = advert;
+  const accessoriesList = getAccessories(accessories);
+  const { city, country } = getAddress(address);
   return (
     <li>
-      <div>
-        <img src={img} alt={`${make} ${model}`} />
-        <FavButton />
+      <div className={css.imageContainer}>
+        <img
+          src={img}
+          alt={`${make} ${model}`}
+          width="274px"
+          height="268px"
+          className={css.advertImage}
+        />
+        <FavButton advert={advert} />
       </div>
-      <div>
-        <h2>
-          {make} <span>{model}</span>, {year}
+      <div className={css.titleContainer}>
+        <h2 className={css.advertTitle}>
+          {make} <span className={css.titleAccent}>{model}</span>, {year}
         </h2>
         <p>{rentalPrice}</p>
       </div>
-      <ul>
+      <ul className={css.info}>
         <li>
           <p>{city}</p>
         </li>
@@ -50,10 +59,10 @@ const AdvertItem = ({
           <p>{mileage}</p>
         </li>
         <li>
-          <p>{accessories}</p>
+          <p>{accessoriesList}</p>
         </li>
       </ul>
-      <Button text="Learn more" />
+      <Button text="Learn more" className={css.learnMoreBtn} onClick={onClick}/>
     </li>
   );
 };

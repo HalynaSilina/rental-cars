@@ -1,0 +1,24 @@
+.sectionContainer {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.loadMoreBtn {
+  width: 79px;
+  height: 24px;
+  font-size: 16px;
+  line-height: calc((24/16));
+  font-weight: 500;
+  color: rgba(52, 112, 255, 1);
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5ms;
+}
+
+.loadMoreBtn:hover {
+  color: rgba(11, 68, 205, 1);
+}

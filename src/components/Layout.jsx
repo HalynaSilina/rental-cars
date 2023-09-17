@@ -1,17 +1,15 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar/NavBar";
 
 const Layout = () => {
   return (
-    <>
-      <NavBar />
       <main>
+      <NavBar />
         <Suspense fallback={<p>Loading</p>}>
           <Outlet />
         </Suspense>
       </main>
-    </>
   );
 };
 

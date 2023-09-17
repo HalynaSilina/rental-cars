@@ -1,0 +1,8 @@
+.advertsGallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min(200px, 100%), 274px));
+  row-gap: 50px;
+  column-gap: 28px;
+  margin-bottom: 100px;
+  text-align: left;
+}

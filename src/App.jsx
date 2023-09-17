@@ -1,11 +1,11 @@
 import "./App.css";
 import { lazy } from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 
-const Home = lazy(() => import("../src/pages/Home"));
-const Favorites = lazy(() => import("../src/pages/Favorites"));
-const Catalog = lazy(() => import("../src/pages/Catalog"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Favorites = lazy(() => import("./pages/Favorites/Favorites"));
+const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="catalog" element={<Catalog />} />
         <Route path="favorites" element={<Favorites />} />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }

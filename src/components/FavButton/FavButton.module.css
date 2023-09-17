@@ -1,0 +1,12 @@
+.favsButton {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 14px;
+  top: 14px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+}
