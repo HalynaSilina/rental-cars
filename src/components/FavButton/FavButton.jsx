@@ -17,7 +17,7 @@ const FavButton = ({ advert }) => {
   };
   return (
     <button type="button" onClick={toggleFavorite} className={css.favsButton}>
-      <img src={isFavorite ? filledHeart : heart} width={18} height={18}/>
+      <img src={isFavorite ? filledHeart : heart} width={18} height={18} />
     </button>
   );
 };

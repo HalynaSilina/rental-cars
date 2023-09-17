@@ -62,7 +62,7 @@ const Modal = ({ carId, onClose }) => {
         {advert.length !== 0 && (
           <article className={css.modal}>
             <button type="button" onClick={onClose} className={css.closeButton}>
-            <img src={close} width={24} height={24}/>
+              <img src={close} width={24} height={24} />
             </button>
             <img
               src={img}

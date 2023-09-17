@@ -19,11 +19,13 @@ const AdvertsGallery = ({ adverts }) => {
             <AdvertItem
               key={`Id${item.id}`}
               advert={item}
-              onClick={()=>handleLearnMoreClick(item.id)}
+              onClick={() => handleLearnMoreClick(item.id)}
             />
           ))}
       </ul>
-      {showModal && <Modal carId={activeId} onClose={() => setShowModal(false)} />}
+      {showModal && (
+        <Modal carId={activeId} onClose={() => setShowModal(false)} />
+      )}
     </>
   );
 };

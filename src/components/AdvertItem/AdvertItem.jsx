@@ -62,7 +62,11 @@ const AdvertItem = ({ advert, status = "Premium", onClick }) => {
           <p>{accessoriesList}</p>
         </li>
       </ul>
-      <Button text="Learn more" className={css.learnMoreBtn} onClick={onClick}/>
+      <Button
+        text="Learn more"
+        className={css.learnMoreBtn}
+        onClick={onClick}
+      />
     </li>
   );
 };

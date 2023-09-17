@@ -2,12 +2,17 @@ import AdvertsGallery from "../../components/AdvertsGallery/AdvertsGallery";
 import css from "./Favorites.module.css";
 
 const Favorites = () => {
-  const favoriteAdverts =
-    JSON.parse(window.localStorage.getItem("favorite")) || [];
+  const favorite = JSON.parse(window.localStorage.getItem("favorite")) || [];
 
   return (
     <section className={css.sectionContainer}>
-      <AdvertsGallery adverts={favoriteAdverts} />
+      {favorite.length > 0 ? (
+        <AdvertsGallery adverts={favorite} />
+      ) : (
+        <div className={css.noFavorites}>
+          <h2>You add no cars in favorites yet</h2>
+        </div>
+      )}
     </section>
   );
 };

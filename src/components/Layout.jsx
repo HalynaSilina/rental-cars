@@ -4,12 +4,12 @@ import NavBar from "./NavBar/NavBar";
 
 const Layout = () => {
   return (
-      <main>
+    <main>
       <NavBar />
-        <Suspense fallback={<p>Loading</p>}>
-          <Outlet />
-        </Suspense>
-      </main>
+      <Suspense fallback={<p>Loading</p>}>
+        <Outlet />
+      </Suspense>
+    </main>
   );
 };
 
